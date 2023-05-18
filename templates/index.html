@@ -1,0 +1,39 @@
+<!--sourced and modified from https://www.w3docs.com/learn-html/html-form-templates.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Word Cloud From PDF</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/styles.css">
+  </head>
+  <body>
+    <div class="testbox">
+      <form action="/file_input" method="POST" enctype="multipart/form-data">
+        <div class="banner">
+          <h1>Word Cloud From PDF</h1>
+        </div>
+
+        <h2>Please upload a PDF (less than 1 MB)</h2>
+
+          <div class="item">
+            <p>Input PDF<sup style="color: red;">*</sup></p>
+          <input type="file" name="fileinput" id="fileinput" accept=".pdf"/>
+              </div>
+
+
+        <div class="btn-block">
+          <button type="submit" href="/file_input">Submit</button>
+        </div>
+<div class="item">
+          <p style="color: red;">{{error}}</p>
+</div>
+      </form>
+
+    </div>
+<div class="testbox">
+              <img src={{result}} width="35%" height="35%" />
+            </div>
+
+  </body>
+</html>
