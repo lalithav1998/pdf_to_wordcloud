@@ -18,6 +18,7 @@ def index():
     result = '../static/white.png'
     if os.path.exists(os.path.join("static", "wordcloud.png")):
         os.remove(os.path.join("static", "wordcloud.png"))
+    make_upload_dir(os.path.join('.', 'uploads'))
     return render_template("index.html", result=result)
 
 
